@@ -13,3 +13,4 @@ module RegisterFile(
 // Standard convention uses X1 as LR w/X5 being a backup.
 // It also says X2 is SP.
 
+endmodule

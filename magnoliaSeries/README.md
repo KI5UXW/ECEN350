@@ -1,0 +1,1 @@
+Series of dual-core CPUs written in Verilog.
