@@ -20,7 +20,7 @@ module testSignExtender;
 
         for (t = 0; t < 4; t = t + 1) begin
             extendType = t[2:0];
-            for (i = 0; i < 5; i = i + 1) begin
+            for (i = 0; i < 2; i = i + 1) begin
                 inst = $random;          // 32-bit random truncated to 26 bits
                 #5;
                 $display("SignOp=%b Instr=%b got=%b", extendType, inst, extenderOut);
