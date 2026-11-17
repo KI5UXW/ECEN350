@@ -67,7 +67,20 @@ module testSignExtender;
         #5;
         $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
 
-        inst = 32'b01111110000000000000000010000000;
+        inst = 32'b00000000000000000000000010000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10000000000000000000000010000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10000000000000000000100110000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01011010000000000000100110000000;
+        #5;
         $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
     
     end
