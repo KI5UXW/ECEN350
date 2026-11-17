@@ -51,10 +51,23 @@ module testSignExtender;
         #5;
         $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
 
-        $display("I-Type Tests");
-        inst = 32'b00000000000000000000000000000000;
 
+
+        $display("S-Type Tests");
+        inst = 32'b00000000000000000000000000000000;
+        extendType = 3'b001;
         #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000000000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000100000000000000000000; // Checking here that it does behave like S-type and not I-Type.
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000000000000000010000000;
         $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
     
     end
