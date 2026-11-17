@@ -19,14 +19,43 @@ module testSignExtender;
         $dumpvars(0, testSignExtender);
 
         $display("I-Type Tests");
-        inst = 32'b0000000000000000000000000000000;
+        inst = 32'b00000000000000000000000000000000;
         extendType = 3'b000;
         #5;
-        $display("SignOp=%b Instr=%b got=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
 
-        inst = 32'b1000000000000000000000000000000;
-        extendType = 3'b000;
         #5;
-        $display("SignOp=%b Instr=%b got=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b00000000000100000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10000000000100000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000000000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000100000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10010010000100000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b0000001001100000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+
+        $display("I-Type Tests");
+        inst = 32'b00000000000000000000000000000000;
+
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+    
     end
 endmodule
