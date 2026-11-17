@@ -22,72 +22,107 @@ module testSignExtender;
         inst = 32'b00000000000000000000000000000000;
         extendType = 3'b000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b00000000000100000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b10000000000100000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b01111110000000000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b01111110000100000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b10010010000100000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b0000001001100000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
 
 
-        $display("S-Type Tests");
+        $display("\nS-Type Tests");
         inst = 32'b00000000000000000000000000000000;
         extendType = 3'b001;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b01111110000000000000000000000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b01111110000100000000000000000000; // Checking here that it does behave like S-type and not I-Type.
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b00000000000000000000000010000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b10000000000000000000000010000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b10000000000000000000100110000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
 
         inst = 32'b01011010000000000000100110000000;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
     
 
-        $display("B-Type Tests");
+        $display("\nB-Type Tests");
         inst = 32'b00000000000000000000000000000000;
         extendType = 3'b010;
         #5;
-        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000000000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01111110000100000000000000000000; // Checking here that it does behave like S-type and not I-Type.
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b00000000000000000000000010000000;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10000000000000000000000010000000;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10000000000000000000100110000000;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b01011010000000000000100110000000;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+    
+        $display("\nU-Type Tests");
+        inst = 32'b00000000000000000000000000000000;
+        extendType = 3'b011;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
+        inst = 32'b10000000000000000000000000000000;
+        #5;
+        $display("extendType=%b Instr=%b \nextenderOut=%b", extendType, inst, extenderOut);
+
     end
 endmodule
