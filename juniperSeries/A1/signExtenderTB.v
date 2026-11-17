@@ -83,5 +83,11 @@ module testSignExtender;
         #5;
         $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
     
+
+        $display("B-Type Tests");
+        inst = 32'b00000000000000000000000000000000;
+        extendType = 3'b010;
+        #5;
+        $display("extendType=%b Instr=%b extenderOut=%b", extendType, inst, extenderOut);
     end
 endmodule
